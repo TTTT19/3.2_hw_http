@@ -18,20 +18,7 @@ def find_url_for_download():
     json_ = response.json()
     return json_['href']
 
-# myString = '\n' #создаем строку для передачи в файл
-#
-#     while True:
-#         text = f.readline().strip()
-#         myString = myString + '\n' + text
-#         if not text:
-#             break
-#
-#
-# data_to_send = json.dumps(myString).encode('utf-8') #передаем строчку в файл
-#почему то русский язык передается в файл странными символами хотя я сделал энкоуд, английский передается нормально.
 
-# print(requests.put(find_url_for_download(), data_to_send))
-# print(find_url_for_download())
 with open ('text.txt', encoding='utf-8') as f:
     data = f.read()
     print(requests.put(find_url_for_download(), data=data))

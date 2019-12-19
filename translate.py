@@ -112,11 +112,9 @@ def read_translate_and_write_file(file_path, need_lang_text = 'ru'):
                     print("Текст из файла переведен и записан в файл 'text.txt")
                     break
                 else:
-                    if __name__ == '__main__':
-                        lang_text = translate_find_language(f'{text}')
-                    if __name__ == '__main__':
-                        translated_text = translate_it(text, lang_text,need_lang_text)
-                        d.write(f'{translated_text}\n')
+                    lang_text = translate_find_language(f'{text}')
+                    translated_text = translate_it(text, lang_text,need_lang_text)
+                    d.write(f'{translated_text}\n')
 
 #Функция выводит словарь с языками
 def help_pick_lang():
@@ -131,7 +129,7 @@ def pick_file():
             file_path = 'ES.txt'
             return file_path
         elif pick_file_input.upper() == 'DE':
-            file_path = 'ES.txt'
+            file_path = 'DE.txt'
             return file_path
         elif pick_file_input.upper() == 'FR':
             file_path = 'FR.txt'
